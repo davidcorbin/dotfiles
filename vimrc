@@ -1,8 +1,3 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
-
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -46,8 +41,6 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-" Highlight current line
-set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
 " Enable line wrap
@@ -117,6 +110,11 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
+
+set completeopt=longest,menuone,preview
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -130,19 +128,17 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Townk/vim-autoclose'
-" Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'jcf/vim-latex'
 Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
+Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'Shougo/vimproc.vim'
+
+" C# Plugins
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 " Haskell Plugins
 Plugin 'eagletmt/ghcmod-vim'
@@ -153,3 +149,5 @@ call vundle#end()
 let g:syntastic_java_checkers=['checkstyle', 'javac']
 let g:syntastic_java_checkstyle_classpath="/usr/local/Cellar/checkstyle/*/libexec/checkstyle-*-all.jar"
 let g:syntastic_java_checkstyle_conf_file="/Users/davidcorbin/.checkstyle/sun_checks.xml"
+
+
