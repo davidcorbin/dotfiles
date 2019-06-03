@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/davidcorbin/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -57,6 +57,28 @@ REPORTTIME=10
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Use antigen
+source $HOME/antigen.zsh
+
+# Use Oh-My-Zsh
+antigen use oh-my-zsh
+
+# Set theme
+antigen theme robbyrussell
+
+# Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)
+antigen bundle git
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    antigen bundle osx
+fi
+
+# Apply changes
+antigen apply
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -73,8 +95,8 @@ plugins=(
   python
   sublime
   z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+#  zsh-autosuggestions
+#  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -146,3 +168,5 @@ export PATH=$PATH:~/Library/Android/sdk/emulator/
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=\'fg=60\'
 
 export PATH="/usr/local/sbin:$PATH"
+
+
