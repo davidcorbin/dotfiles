@@ -95,8 +95,6 @@ plugins=(
   python
   sublime
   z
-#  zsh-autosuggestions
-#  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -138,9 +136,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Qt resource path
 export PATH="/usr/local/opt/qt/bin:$PATH"
-
-# Enable thefuck
-eval $(thefuck --alias)
 
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
