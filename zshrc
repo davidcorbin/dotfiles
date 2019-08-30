@@ -88,6 +88,7 @@ plugins=(
   docker
   gpg-agent
   httpie
+  kubectl
   npm
   osx
   pip
@@ -164,4 +165,17 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=\'fg=60\'
 
 export PATH="/usr/local/sbin:$PATH"
 
+export PATH=/usr/local/anaconda3/bin:"$PATH"
+
+# Google Cloud Autocompletion
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+export PATH="/Users/davidcorbin/.cargo/bin:$PATH"
+
+# Libraries for OpenSSL
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
