@@ -61,7 +61,7 @@ REPORTTIME=10
 source $HOME/antigen.zsh
 
 # Load antigen configuration
-source .antigenrc
+source ~/.antigenrc
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
