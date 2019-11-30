@@ -179,3 +179,9 @@ export PATH="/Users/davidcorbin/.cargo/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
+export PATH="/Library/TeX/texbin:$PATH"
+
+# Go Path
+export "GOPATH=$HOME/workspace/go"
+export PATH="$PATH:$GOPATH/bin"
+
