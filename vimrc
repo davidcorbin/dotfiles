@@ -137,6 +137,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Haskell Plugins
 Plugin 'eagletmt/ghcmod-vim'
 
+" Pure Snazzy Theme
+Plugin 'connorholyday/vim-snazzy'
+
 call vundle#end()
 
 " Set up java settings for checkstyle
@@ -144,4 +147,6 @@ let g:syntastic_java_checkers=['checkstyle', 'javac']
 let g:syntastic_java_checkstyle_classpath="/usr/local/Cellar/checkstyle/*/libexec/checkstyle-*-all.jar"
 let g:syntastic_java_checkstyle_conf_file="/Users/davidcorbin/.checkstyle/sun_checks.xml"
 
+" Use Snazzy color scheme
+colorscheme snazzy
 
