@@ -11,7 +11,6 @@ antigen bundle git-extras
 # Mac specific changes
 if [[ "$OSTYPE" == "darwin"* ]]; then
     antigen bundle osx
-    antigen bundle brew
 fi
 
 # Load bundles from external repos.
