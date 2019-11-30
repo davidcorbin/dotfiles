@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
 
 # Report command running time if it is more than 10 seconds
 REPORTTIME=10
@@ -60,24 +60,8 @@ REPORTTIME=10
 # Use antigen
 source $HOME/antigen.zsh
 
-# Use Oh-My-Zsh
-antigen use oh-my-zsh
-
-# Set theme
-antigen theme robbyrussell
-
-# Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)
-antigen bundle git
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    antigen bundle osx
-fi
-
-# Apply changes
-antigen apply
+# Load antigen configuration
+source .antigenrc
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -98,9 +82,7 @@ plugins=(
   z
 )
 
-source $ZSH/oh-my-zsh.sh
-
-prompt_context() {}
+#prompt_context() {}
 
 # Initialize jenv
 export PATH="$HOME/.jenv/bin:$PATH"
@@ -141,7 +123,7 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # added by travis gem
-[ -f /Users/davidcorbin/.travis/travis.sh ] && source /Users/davidcorbin/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 export PATH="/anaconda3/bin:$PATH"
 

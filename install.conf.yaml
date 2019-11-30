@@ -9,6 +9,7 @@
     ~/.zshrc: zshrc
     ~/.tmux.conf: tmux.conf
     ~/.hyper.js: hyper.js
+    ~/.antigenrc: antigenrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
