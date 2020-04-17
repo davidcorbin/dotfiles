@@ -139,9 +139,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH=$PATH:~/Library/Android/sdk/platform-tools/
 export PATH=$PATH:~/Library/Android/sdk/emulator/
 
-
-#source /Users/davidcorbin/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Change the zsh-autosuggestions color to make it readable
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=\'fg=60\'
 
@@ -155,9 +152,12 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
-export PATH="/Users/davidcorbin/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Libraries for OpenSSL
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+# GOPATH
+export PATH="$HOME/go/bin/:$PATH"
 
