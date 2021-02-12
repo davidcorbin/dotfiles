@@ -137,6 +137,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Haskell Plugins
 Plugin 'eagletmt/ghcmod-vim'
 
+" Go Plugins
+Plugin 'fatih/vim-go'
+
 " Pure Snazzy Theme
 Plugin 'connorholyday/vim-snazzy'
 

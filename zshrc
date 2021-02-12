@@ -161,3 +161,5 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 # GOPATH
 export PATH="$HOME/go/bin/:$PATH"
 
+if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
+
